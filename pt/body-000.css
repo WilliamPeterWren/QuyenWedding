@@ -1,0 +1,173 @@
+.editable-parent {
+    border: none !important;
+    outline: none !important;
+}
+
+.notactive {
+    display: none !important;
+}
+
+.editable-child {
+    outline: none;
+}
+
+.edit-active {
+    display: none !important;
+}
+
+#hero {
+    margin-top: 90px;
+    height: 90vh;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+#hero {
+    min-height: 650px !important;
+}
+
+.ht-slideshow {
+    margin-top: -70px;
+    position: absolute;
+    z-index: -1;
+    /* Cha của các slide */
+    width: 100%;
+    height: 100%;
+    /* Chiều cao full viewport */
+    overflow: hidden;
+    /* Ẩn phần bị tràn ra ngoài */
+}
+
+.ht-slides {
+    position: relative;
+    /* Chỉ định vị trí tương đối */
+    width: 100%;
+    height: 100%;
+}
+
+.ht-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease, transform 10s ease-out;
+    opacity: 0;
+    z-index: 0;
+}
+
+.ht-slide.active {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1;
+}
+
+@media (min-width: 601px) {
+    .ht-slide {
+        background-size: contain;
+    }
+
+    .ht-slide::before,
+    .ht-slide::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 30%;
+        /* Chiếm 50% chiều rộng */
+        height: 100%;
+        z-index: 1;
+        /* Đưa lớp phủ lên trên slide */
+        pointer-events: none;
+        /* Không cho phép tương tác với lớp phủ */
+    }
+
+    .ht-slide::before {
+        left: 0;
+        /* Lớp phủ bên trái */
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 30%);
+        /* Mờ dần từ trong ra ngoài */
+        filter: blur(20px);
+        /* Điều chỉnh độ mờ */
+    }
+
+    .ht-slide::after {
+        right: 0;
+        /* Lớp phủ bên phải */
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 30%);
+        /* Mờ dần từ trong ra ngoài */
+        filter: blur(20px);
+        /* Điều chỉnh độ mờ */
+    }
+}
+
+#couple .editable {
+    position: unset;
+}
+
+#couple .image-wrapper {
+    border-radius: 0px;
+
+}
+
+#couple .image-editor {
+    max-width: 500px;
+    max-height: 500px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#couple .movableImage {
+    position: absolute;
+}
+
+#couple .font-style-h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+@media (max-width: 991px) {
+    .boder {
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        aspect-ratio: 1/1;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        max-height: 500px;
+    }
+}
+
+#story .image-editor {
+    max-width: 500px;
+    max-height: 500px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+@media (min-width: 991px) {
+    #story .image-wrapper {
+        border-radius: 0px;
+
+    }
+}
+
+#story .movableImage {
+    position: absolute;
+    left: 0;
+}
+
+#story .super-break {
+    word-wrap: break-word;
+}
+
+#story .font-opensans {
+    font-family: "Open Sans", sans-serif;
+}
+
+#story .font-h4 {
+    font-size: 28px;
+}
