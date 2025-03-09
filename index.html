@@ -194,42 +194,35 @@
         </div>
     </div>
 
-    <div id="wrapper">
-        
-
+    <div id="wrapper">      
         <header id="header" class="header">
-        
             <div class="sticky-wrapper" style="height: 70px;">
                 <div class="sticky-wrapper" style="height: 71px;">
-                    <div class="sticky-wrapper" style="height: 68px;"><div class="sticky-wrapper" style="height: 68px;"><div class="nav-section stuck">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12 justify-flex">
-
-                                    <a href="" class="nav-logo align-items-center h-100" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-                                        <h1 style="font-size:25px" class="upper">
-                                            Q
-                                            <span class="main-color">
-                                                <i class="fa fa-heart" style="margin:5px 5px 5px 10px;"></i>
-                                            </span>
-                                            C
-                                        </h1>
-                                    </a>
-                                    <!-- BEGIN MAIN MENU -->
-                                    <nav class="navbar">
-                                        <ul class="nav navbar-nav">
-                                                                                                                                                        </ul>
-
-                                        <button id="nav-mobile-btn"><i class="fas fa-bars"></i></button><!-- Mobile menu button -->
-                                    </nav>
-
-
-                                    <!-- END MAIN MENU -->
-                                    
+                    <div class="sticky-wrapper" style="height: 68px;">
+                        <div class="sticky-wrapper" style="height: 68px;">
+                            <div class="nav-section stuck">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-12 justify-flex">
+                                            <a href="" class="nav-logo align-items-center h-100" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+                                                <h1 style="font-size:25px" class="upper">
+                                                    Q
+                                                    <span class="main-color">
+                                                        <i class="fa fa-heart" style="margin:5px 5px 5px 10px;"></i>
+                                                    </span>
+                                                    C
+                                                </h1>
+                                            </a>
+                                            <nav class="navbar">
+                                                <ul class="nav navbar-nav"></ul>
+                                                <button id="nav-mobile-btn"><i class="fas fa-bars"></i></button>
+                                            </nav>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div></div></div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -347,7 +340,6 @@
                 }
             }
         </style>
-
 
         <section id="hero" class="editable-parent scroll-to  " style="min-height: 953px;">
             <div class="ht-slideshow">
@@ -696,6 +688,7 @@
                 font-size: 28px;
             }
         </style>
+
         <section id="story" class="editable-parent ">
             
             <div class="children" style="display: block">
@@ -728,8 +721,6 @@
             </div>
         </section>
     </div>
-
-
 
     <style>
         #invitation  .font-h3 {
@@ -814,7 +805,7 @@
     </section>
 
 <!-- album hình cưới cần chỉnh sửa -->
-<section id="gallery" class="editable-parent scroll-to  ">
+<section id="gallery" class="editable-parent scroll-to">
     
     <div class="children" style="display: block">
         <div class="container">
@@ -3386,7 +3377,29 @@
 <script>
     let galleryItemNumber = 0;
     var photoGalleries = [];
-    var albumItems = ["\/storage\/images\/1739462129_DSC01815.webp","\/storage\/images\/1739462129_DSC00947.webp","\/storage\/images\/1739462129_DSC01761.webp","\/storage\/images\/1739462130_DSC01097.webp","\/storage\/images\/1739462130_DSC01840.webp","\/storage\/images\/1739462130_DSC02626.webp","\/storage\/images\/1739462130_DSC02567.webp","\/storage\/images\/1739462130_DSC01932.webp","\/storage\/images\/1739462145_DSC03013.webp","\/storage\/images\/1739462149_DSC08955.webp","\/storage\/images\/1739462149_DSC08869.webp","\/storage\/images\/1739462149_DSC08945.webp","\/storage\/images\/1739462149_DSC09090.webp","\/storage\/images\/1739462150_DSC02797.webp","\/storage\/images\/1739462150_DSC02660.webp","\/storage\/images\/1739462150_DSC02700.webp","\/storage\/images\/1739462150_DSC09442.webp","\/storage\/images\/1739462150_DSC09407.webp","\/storage\/images\/1739462150_DSC02681.webp","\/storage\/images\/1739462151_DSC09518.webp"]; // Fetching album items from server data
+    var albumItems = [
+        ".\/pt\/CHIP6723_11zon.webp",
+        ".\/pt\/CHIP6725_11zon.webp",
+        ".\/pt\/CHIP6738_11zon.webp",
+        ".\/pt\/CHIP6739_11zon.webp",
+        ".\/pt\/CHIP6743_11zon.webp",
+        ".\/pt\/CHIP6748_11zon.webp",
+        ".\/pt\/CHIP6753_11zon.webp",
+        ".\/pt\/CHIP6761_11zon.webp",
+        ".\/pt\/CHIP6763_11zon.webp",
+        ".\/pt\/CHIP6766_11zon.webp",
+        ".\/pt\/CHIP6773_11zon.webp",
+        ".\/pt\/CHIP6785_11zon.webp",
+        ".\/pt\/CHIP6802_11zon.webp",
+        ".\/pt\/CHIP6808_11zon.webp",
+        ".\/pt\/CHIP6812_11zon.webp",
+        ".\/pt\/CHIP6813_11zon.webp",
+        ".\/pt\/CHIP6830_11zon.webp",
+        ".\/pt\/CHIP6833_11zon.webp",
+        ".\/pt\/CHIP6835_11zon.webp",
+        ".\/pt\/CHIP6837_11zon.webp",
+     
+    ]; 
 
     // Populate photoGalleries array for dynamic gallery
     albumItems.forEach(function(item) {
@@ -3430,7 +3443,28 @@
         // thumbnailHeight: 70, // Thumbnail height in Dropzone
         init: function() {
             var myDropzone = this;
-            var uploadedImages = ["\/storage\/images\/1739462129_DSC01815.webp","\/storage\/images\/1739462129_DSC00947.webp","\/storage\/images\/1739462129_DSC01761.webp","\/storage\/images\/1739462130_DSC01097.webp","\/storage\/images\/1739462130_DSC01840.webp","\/storage\/images\/1739462130_DSC02626.webp","\/storage\/images\/1739462130_DSC02567.webp","\/storage\/images\/1739462130_DSC01932.webp","\/storage\/images\/1739462145_DSC03013.webp","\/storage\/images\/1739462149_DSC08955.webp","\/storage\/images\/1739462149_DSC08869.webp","\/storage\/images\/1739462149_DSC08945.webp","\/storage\/images\/1739462149_DSC09090.webp","\/storage\/images\/1739462150_DSC02797.webp","\/storage\/images\/1739462150_DSC02660.webp","\/storage\/images\/1739462150_DSC02700.webp","\/storage\/images\/1739462150_DSC09442.webp","\/storage\/images\/1739462150_DSC09407.webp","\/storage\/images\/1739462150_DSC02681.webp","\/storage\/images\/1739462151_DSC09518.webp"]; // Load existing images from server
+            var uploadedImages = [
+                ".\/pt\/CHIP6723_11zon.webp",
+                ".\/pt\/CHIP6725_11zon.webp",
+                ".\/pt\/CHIP6738_11zon.webp",
+                ".\/pt\/CHIP6739_11zon.webp",
+                ".\/pt\/CHIP6743_11zon.webp",
+                ".\/pt\/CHIP6748_11zon.webp",
+                ".\/pt\/CHIP6753_11zon.webp",
+                ".\/pt\/CHIP6761_11zon.webp",
+                ".\/pt\/CHIP6763_11zon.webp",
+                ".\/pt\/CHIP6766_11zon.webp",
+                ".\/pt\/CHIP6773_11zon.webp",
+                ".\/pt\/CHIP6785_11zon.webp",
+                ".\/pt\/CHIP6802_11zon.webp",
+                ".\/pt\/CHIP6808_11zon.webp",
+                ".\/pt\/CHIP6812_11zon.webp",
+                ".\/pt\/CHIP6813_11zon.webp",
+                ".\/pt\/CHIP6830_11zon.webp",
+                ".\/pt\/CHIP6833_11zon.webp",
+                ".\/pt\/CHIP6835_11zon.webp",
+                ".\/pt\/CHIP6837_11zon.webp",
+            ]; 
 
             // Add existing images as "mock" files in Dropzone
             uploadedImages.forEach(function(imageUrl) {
@@ -3540,7 +3574,7 @@
     <script>
         window.addEventListener('click', () => {
             const audio = document.getElementById('audio');
-            // audio.muted = false;
+            audio.muted = false;
             audio.play().catch(error => console.error('Không thể phát:', error));
         });
     </script>
