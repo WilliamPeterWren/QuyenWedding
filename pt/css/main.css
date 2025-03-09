@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@font-face {
+/* @font-face {
   font-family: Gotham;
   src: url("/font/wedd/iCielGotham-Bold.woff") format("woff"), url("/font/wedd/iCielGotham-Bold.woff2") format("woff2");
   font-weight: bold;
@@ -64,7 +64,7 @@
   font-style: normal;
   font-weight: normal;
   src: url("/font/wedd/Arimo-Regular.woff2") format("woff2"), url("/font/wedd/Arimo-Regular.woff") format("woff");
-}
+} */
 * body {
   font-family: Gotham;
   font-weight: normal;
